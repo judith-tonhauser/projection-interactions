@@ -1,5 +1,3 @@
-README
-
 This repository contains the two experiments, materials, and analysis scripts reported on in Judith Degen & Judith Tonhauser "Projection inferences: On the relation between prior beliefs, at-issueness, and lexical meaning".
 
 The repository has the following folders:
