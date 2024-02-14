@@ -674,7 +674,7 @@ tableData = tableData %>%
 # save tableData
 saveRDS(tableData, "../models/latex-tables/tableDataAIPRIOR")
 
-# combine the results from the two experiments ----
+# combine the results from the two analyses ----
 
 # read data 
 tableData1 = readRDS("../models/latex-tables/tableDataPROJ")
@@ -711,128 +711,118 @@ t1 = print(xtable(tableData),
 
 write(t1, "../models/latex-tables/t1")
 
-# output of the models for supplement ----
+# output of the models for the supplement ----
 
-# load the models
-m = read(file="../models/main-analysis/model.know")
-summary(m)
+# there are 60 models for the analysis of questions I, II, and III.a
+# for each of the 20 predicates, full data, proj/ai, ai/proj
+# and another 60 models for the analysis of question III.b
 
+# read the data (to create list of predicates)
+d <- read_csv("../data/d.csv")
+nrow(d) #10100
+# change predicate names so that loops can work
+d = d %>%
+  mutate(short_trigger = recode(short_trigger,"be annoyed" = "be.annoyed","be right" = "be.right"))
+table(d$short_trigger)
 
-m_projai = readRDS(file="../models/beta-model-projai-PROVE.rds")
-m_aiproj = readRDS(file="../models/beta-model-aiproj-PROVE.rds")
+# define the predicates
+predicates = unique(as.character(d$short_trigger))
+predicates
 
-summary(m)
-
-m = readRDS(file="../models/beta-model-main.rds")
-m_projai = readRDS(file="../models/beta-model-projai.rds")
-m_aiproj = readRDS(file="../models/beta-model-aiproj.rds")
-
-mcmcReg(m)
-
-texreg::mcmcReg(m, file="../models/fullModelOutput/m.tex")
-
-tableApp1 = print(xtable(m),
-                  #only.contents = T,
-                  include.rownames=FALSE,
-                  include.colnames=TRUE,
-                  tabular.environment="longtable",
-                  floating=FALSE,
-                  hline.after = NULL,
-                  latex.environments=NULL,
-                  booktabs=TRUE,
-                  sanitize.text.function = function(x){x},
-                  comment = F
-)
-
-# write the table, print in latex document in supplement
-write(tableApp1, "../models/fullModelOutput/analysis1.tex")
-
-# CONTINUE FIXING CODE STARTING HERE
-
-# output of the models for supplement ----
-
-# load the models
-m = readRDS(file="../models/beta-model-main-PROVE.rds")
-m_projai = readRDS(file="../models/beta-model-projai-PROVE.rds")
-m_aiproj = readRDS(file="../models/beta-model-aiproj-PROVE.rds")
-
-summary(m)
-
-m = readRDS(file="../models/beta-model-main.rds")
-m_projai = readRDS(file="../models/beta-model-projai.rds")
-m_aiproj = readRDS(file="../models/beta-model-aiproj.rds")
-
-mcmcReg(m)
-
-texreg::mcmcReg(m, file="../models/fullModelOutput/m.tex")
-
-tableApp1 = print(xtable(m),
-                  #only.contents = T,
-                  include.rownames=FALSE,
-                  include.colnames=TRUE,
-                  tabular.environment="longtable",
-                  floating=FALSE,
-                  hline.after = NULL,
-                  latex.environments=NULL,
-                  booktabs=TRUE,
-                  sanitize.text.function = function(x){x},
-                  comment = F
-)
-
-# write the table, print in latex document in supplement
-write(tableApp1, "../models/fullModelOutput/analysis1.tex")
-                
-# Latex output for Bayesian models in supplements ----
-
-# model with centered block effect
-printd = as.data.frame(summary(m.d.B.cblock)$fixed)
-
-# create column name for first column
-printd <- rownames_to_column(printd, var = "tmp")
-
-printd = printd %>%
-  mutate(tmp = recode(tmp, "Intercept" = "Intercept (prove)")) %>%
-  mutate(tmp = gsub("short_trigger", "predicate_", tmp)) %>%
-  rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
-  select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
-  mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
-  mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
-  rename("beta" = "Estimate") %>%
-  rename("95% CI" = "95% CI") %>%
-  select(-c(lower,upper))
-printd
-
-# change column names
-colnames(printd) <- c("","beta","95% CI")
-
-exp1.model = print(xtable(printd),
+# main analysis models for questions I, II, III.a
+for (p in predicates) {
+    model = readRDS(paste("../models/projection-main/model.",p,".rds",sep=""))
+    tmp_table = as.data.frame(summary(model)$fixed)
+    tmp_table = tmp_table %>% 
+      rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
+      select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
+      mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
+      mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+      #rename("95% CI" = "95% CI") %>%
+      select(-c(lower,upper))
+    caption = paste("Full data, ",p,sep="")
+    write(print(xtable(tmp_table,caption = caption),
                 include.rownames=FALSE,
                 include.colnames=TRUE,
-                tabular.environment="longtable",
+                tabular.environment="tabular",
                 floating=FALSE,
                 latex.environments=NULL,
-                booktabs=FALSE)
-write(exp1.model, "../models/latex-tables/exp1.model")
+                booktabs=FALSE),
+        file=paste("../models/latex-tables/supplement/models-for-questions-I-II-IIIa/full.",p,".tex", sep=""))
+}
 
-# Supplement: Analysis of manipulation of prior beliefs ----
-names(d)
-table(d$content)
+# by-block analysis models for questions I, II, III.a
+block = c("projai.", "aiproj.")
+block
 
-# prepare the data
-d$prior_type = as.factor(as.character(d$prior_type))
-d$workerid = as.factor(as.character(d$workerid))
+for (p in predicates) {
+  for (b in block) {
+  model = readRDS(paste("../models/projection-byBlock/model_",b,p,".rds",sep=""))
+  tmp_table = as.data.frame(summary(model)$fixed)
+  tmp_table = tmp_table %>% 
+    rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
+    select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
+    mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
+    mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+    #rename("95% CI" = "95% CI") %>%
+    select(-c(lower,upper))
+  caption = paste(b,"data, ",p,sep="")
+  write(print(xtable(tmp_table,caption = caption),
+              include.rownames=FALSE,
+              include.colnames=TRUE,
+              #tabular.environment="longtable",
+              floating=FALSE,
+              latex.environments=NULL,
+              booktabs=FALSE),
+        file=paste("../models/latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.", b,p,".tex", sep=""))
+  }
+}
 
-# set lower probability fact as reference level of prior_type
-d$prior_type = relevel(d$prior_type, ref="low_prior")
-levels(d$prior_type)
-contrasts(d$prior_type)
+# main analysis models for question III.b
+for (p in predicates) {
+  model = readRDS(paste("../models/ai-prior-main/model.",p,".rds",sep=""))
+  tmp_table = as.data.frame(summary(model)$fixed)
+  tmp_table = tmp_table %>% 
+    rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
+    select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
+    mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
+    mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+    #rename("95% CI" = "95% CI") %>%
+    select(-c(lower,upper))
+  caption = paste("Full data, ",p,sep="")
+  write(print(xtable(tmp_table,caption = caption),
+              include.rownames=FALSE,
+              include.colnames=TRUE,
+              tabular.environment="tabular",
+              floating=FALSE,
+              latex.environments=NULL,
+              booktabs=FALSE),
+        file=paste("../models/latex-tables/supplement/models-for-question-IIIb/full.",p,".tex", sep=""))
+}
 
-# analysis: does high/low prob fact predict actual prior ratings?
-m.prior = lmer(prior ~ prior_type + (1+prior_type|content) + (1+prior_type|workerid), data=d, REML=F)
-saveRDS(m.prior, "../models/m.prior.rds")
-m.prior <- readRDS("../models/m.prior.rds")
+# by-block analysis models for question III.b
+block = c("projai.", "aiproj.")
+block
 
-summary(m.prior)
-# prior_typehigh_prior  0.51466    0.02956 22.47640   17.41 1.54e-14 ***
-
-
+for (p in predicates) {
+  for (b in block) {
+    model = readRDS(paste("../models/ai-prior-byBlock/model_",b,p,".rds",sep=""))
+    tmp_table = as.data.frame(summary(model)$fixed)
+    tmp_table = tmp_table %>% 
+      rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
+      select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
+      mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
+      mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+      #rename("95% CI" = "95% CI") %>%
+      select(-c(lower,upper))
+    caption = paste(b,"data, ",p,sep="")
+    write(print(xtable(tmp_table,caption = caption),
+                include.rownames=FALSE,
+                include.colnames=TRUE,
+                #tabular.environment="longtable",
+                floating=FALSE,
+                latex.environments=NULL,
+                booktabs=FALSE),
+          file=paste("../models/latex-tables/supplement/models-for-question-IIIb/byBlock.", b,p,".tex", sep=""))
+  }
+}
