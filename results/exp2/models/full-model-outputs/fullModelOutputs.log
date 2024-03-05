@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 FEB 2024 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 MAR 2024 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1150,13 +1150,13 @@ File: ot1txr.fd 2000/12/15 v3.1
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
+* modes: landscape 
+* h-part:(L,W,R)=(72.26999pt, 650.43001pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 469.75502pt, 72.26999pt)
+* \paperwidth=794.96999pt
+* \paperheight=614.295pt
+* \textwidth=650.43001pt
+* \textheight=469.75502pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
@@ -1254,7 +1254,9 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 107.
 File: utxsyc.fd 2000/12/15 v3.1
 )
 Package xypdf Info: Line width: 0.61319pt on input line 107.
+ [1
 
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.acknowledge.tex
 )
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.ackno
@@ -1356,10 +1358,8 @@ st.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.think
 .tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.think
-.tex) [1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4] [5] [6] [7]
+.tex) [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16]
+[17] [18] [19] [20] [21]
 (../latex-tables/supplement/models-for-question-IIIb/full.acknowledge.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.acknowledge
 .tex)
@@ -1431,34 +1431,34 @@ ex) (../latex-tables/supplement/models-for-question-IIIb/full.hear.tex)
 ) (../latex-tables/supplement/models-for-question-IIIb/full.think.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.think.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.think.tex)
-[8] [9] [10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 675.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 675.
+[22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 683.
+ [32]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 683.
  (./fullModelOutputs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 675.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 675.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 683.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 683.
 Package rerunfilecheck Info: File `fullModelOutputs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 675.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 683.
  ) 
 Here is how much of TeX's memory you used:
- 24722 strings out of 493014
- 437682 string characters out of 6133351
- 614974 words of memory out of 5000000
- 27276 multiletter control sequences out of 15000+600000
+ 24744 strings out of 493014
+ 437851 string characters out of 6133351
+ 650990 words of memory out of 5000000
+ 27277 multiletter control sequences out of 15000+600000
  26338 words of font info for 74 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,10n,87p,3248b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,87p,3248b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on fullModelOutputs.pdf (12 pages, 60197 bytes).
+Output written on fullModelOutputs.pdf (32 pages, 87529 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 368 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
+ 196 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

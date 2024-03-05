@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 FEB 2024 19:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 MAR 2024 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1150,13 +1150,13 @@ File: ot1txr.fd 2000/12/15 v3.1
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
+* modes: landscape 
+* h-part:(L,W,R)=(72.26999pt, 650.43001pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 469.75502pt, 72.26999pt)
+* \paperwidth=794.96999pt
+* \paperheight=614.295pt
+* \textwidth=650.43001pt
+* \textheight=469.75502pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
@@ -1261,204 +1261,380 @@ Package xypdf Info: Line width: 0.61319pt on input line 107.
 wledge.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.ackno
 wledge.tex)
+Overfull \hbox (19.50108pt too wide) in paragraph at lines 122--127
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.admit.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.admit
 .tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.admit
 .tex)
+Overfull \hbox (23.14743pt too wide) in paragraph at lines 136--141
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.announce.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.annou
 nce.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.annou
 nce.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 150--155
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.be.annoyed.tex)
 
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.be.an
 noyed.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.be.an
 noyed.tex)
+Overfull \hbox (19.50108pt too wide) in paragraph at lines 164--169
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.be.right.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.be.ri
 ght.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.be.ri
 ght.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 178--183
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.confess.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.confe
 ss.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.confe
 ss.tex)
+Overfull \hbox (23.14743pt too wide) in paragraph at lines 192--197
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.confirm.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.confi
 rm.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.confi
 rm.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 206--211
+ [][][][][][] 
+ []
+
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.demonstrate.tex
 )
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.demon
 strate.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.demon
 strate.tex)
+Overfull \hbox (26.79378pt too wide) in paragraph at lines 220--225
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.discover.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.disco
 ver.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.disco
 ver.tex)
+Overfull \hbox (19.50108pt too wide) in paragraph at lines 234--239
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.establish.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.estab
 lish.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.estab
 lish.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 248--253
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.hear.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.hear.
 tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.hear.
-tex) (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.inform.tex
-)
+tex)
+Overfull \hbox (23.14743pt too wide) in paragraph at lines 262--267
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-questions-I-II-IIIa/full.inform.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.infor
 m.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.infor
-m.tex) (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.know.tex
-)
+m.tex)
+Overfull \hbox (19.50108pt too wide) in paragraph at lines 276--281
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-questions-I-II-IIIa/full.know.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.know.
 tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.know.
 tex)
+Overfull \hbox (15.85474pt too wide) in paragraph at lines 290--295
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.pretend.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.prete
 nd.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.prete
 nd.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 304--309
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.prove.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.prove
 .tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.prove
 .tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 318--323
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.reveal.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.revea
 l.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.revea
-l.tex) (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.say.tex)
+l.tex)
+Overfull \hbox (26.79378pt too wide) in paragraph at lines 332--337
+ [][][][][][] 
+ []
 
+(../latex-tables/supplement/models-for-questions-I-II-IIIa/full.say.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.say.t
 ex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.say.t
-ex) (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.see.tex)
+ex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 346--351
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-questions-I-II-IIIa/full.see.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.see.t
 ex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.see.t
-ex) (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.suggest.tex
-)
+ex)
+Overfull \hbox (23.14743pt too wide) in paragraph at lines 360--365
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-questions-I-II-IIIa/full.suggest.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.sugge
 st.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.sugge
 st.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 374--379
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/full.think.tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.think
 .tex)
 (../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.think
-.tex) [1
+.tex)
+Overfull \hbox (30.44012pt too wide) in paragraph at lines 388--393
+ [][][][][][] 
+ []
 
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4] [5] [6] [7]
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] [5] [6] [7] [8] [9] [10]
 (../latex-tables/supplement/models-for-question-IIIb/full.acknowledge.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.acknowledge
 .tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.acknowledge
-.tex) (../latex-tables/supplement/models-for-question-IIIb/full.admit.tex)
+.tex)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 408--413
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.admit.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.admit.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.admit.tex)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 422--427
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.announce.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.announce.te
 x)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.announce.te
-x) (../latex-tables/supplement/models-for-question-IIIb/full.be.annoyed.tex)
+x)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 436--441
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.be.annoyed.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.be.annoyed.
 tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.be.annoyed.
-tex) (../latex-tables/supplement/models-for-question-IIIb/full.be.right.tex)
+tex)
+Overfull \hbox (17.66153pt too wide) in paragraph at lines 450--455
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.be.right.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.be.right.te
 x)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.be.right.te
-x) (../latex-tables/supplement/models-for-question-IIIb/full.confess.tex)
+x)
+Overfull \hbox (21.30788pt too wide) in paragraph at lines 464--469
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.confess.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.confess.tex
 )
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.confess.tex
-) (../latex-tables/supplement/models-for-question-IIIb/full.confirm.tex)
+)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 478--483
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.confirm.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.confirm.tex
 )
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.confirm.tex
-) (../latex-tables/supplement/models-for-question-IIIb/full.demonstrate.tex)
+)
+Overfull \hbox (21.30788pt too wide) in paragraph at lines 492--497
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.demonstrate.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.demonstrate
 .tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.demonstrate
-.tex) (../latex-tables/supplement/models-for-question-IIIb/full.discover.tex)
+.tex)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 506--511
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.discover.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.discover.te
 x)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.discover.te
-x) (../latex-tables/supplement/models-for-question-IIIb/full.establish.tex)
+x)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 520--525
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.establish.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.establish.t
 ex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.establish.t
-ex) (../latex-tables/supplement/models-for-question-IIIb/full.hear.tex)
+ex)
+Overfull \hbox (21.30788pt too wide) in paragraph at lines 534--539
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.hear.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.hear.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.hear.tex)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 548--553
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.inform.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.inform.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.inform.tex)
+
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 562--567
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.know.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.know.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.know.tex)
+Overfull \hbox (14.01518pt too wide) in paragraph at lines 576--581
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.pretend.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.pretend.tex
 )
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.pretend.tex
-) (../latex-tables/supplement/models-for-question-IIIb/full.prove.tex)
+)
+Overfull \hbox (12.18654pt too wide) in paragraph at lines 590--595
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.prove.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.prove.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.prove.tex)
+Overfull \hbox (17.66153pt too wide) in paragraph at lines 604--609
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.reveal.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.reveal.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.reveal.tex)
+
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 618--623
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.say.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.say.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.say.tex)
+Overfull \hbox (21.30788pt too wide) in paragraph at lines 632--637
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.see.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.see.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.see.tex)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 646--651
+ [][][][][][] 
+ []
+
 (../latex-tables/supplement/models-for-question-IIIb/full.suggest.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.suggest.tex
 )
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.suggest.tex
-) (../latex-tables/supplement/models-for-question-IIIb/full.think.tex)
+)
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 660--665
+ [][][][][][] 
+ []
+
+(../latex-tables/supplement/models-for-question-IIIb/full.think.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.think.tex)
 (../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.think.tex)
-[8] [9] [10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 675.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 675.
+Overfull \hbox (10.36884pt too wide) in paragraph at lines 674--679
+ [][][][][][] 
+ []
+
+[11] [12] [13] [14] [15] [16] [17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 683.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 683.
  (./fullModelOutputs.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 675.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 675.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 683.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 683.
 Package rerunfilecheck Info: File `fullModelOutputs.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 675.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 683.
  ) 
 Here is how much of TeX's memory you used:
- 24722 strings out of 493014
- 437682 string characters out of 6133351
- 614870 words of memory out of 5000000
- 27276 multiletter control sequences out of 15000+600000
+ 24730 strings out of 493014
+ 437753 string characters out of 6133351
+ 645990 words of memory out of 5000000
+ 27277 multiletter control sequences out of 15000+600000
  26338 words of font info for 74 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 55i,10n,87p,3248b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,11n,87p,3248b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/local/texlive/
 2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on fullModelOutputs.pdf (12 pages, 60136 bytes).
+Output written on fullModelOutputs.pdf (18 pages, 72347 bytes).
 PDF statistics:
- 278 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 175 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 279 compressed objects within 3 object streams
+ 182 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

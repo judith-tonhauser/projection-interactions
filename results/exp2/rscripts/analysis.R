@@ -766,12 +766,12 @@ for (p in predicates) {
     rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
     select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
     mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
-    mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
-    #rename("95% CI" = "95% CI") %>%
-    select(-c(lower,upper))
+    mutate("95% CrI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+    select(-c(lower,upper)) %>%
+    rename("Expected mean" = "Estimate")
   caption = paste("Full data, ",p,sep="")
   write(print(xtable(tmp_table,caption = caption),
-              include.rownames=FALSE,
+              include.rownames=TRUE,
               include.colnames=TRUE,
               tabular.environment="tabular",
               floating=FALSE,
@@ -792,12 +792,12 @@ for (p in predicates) {
       rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
       select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
       mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
-      mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
-      #rename("95% CI" = "95% CI") %>%
-      select(-c(lower,upper))
+      mutate("95% CrI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+      select(-c(lower,upper)) %>%
+      rename("Expected mean" = "Estimate")
     caption = paste(b,"data, ",p,sep="")
     write(print(xtable(tmp_table,caption = caption),
-                include.rownames=FALSE,
+                include.rownames=TRUE,
                 include.colnames=TRUE,
                 #tabular.environment="longtable",
                 floating=FALSE,
@@ -815,12 +815,12 @@ for (p in predicates) {
     rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
     select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
     mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
-    mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
-    #rename("95% CI" = "95% CI") %>%
-    select(-c(lower,upper))
+    mutate("95% CrI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+    select(-c(lower,upper)) %>%
+    rename("Expected mean" = "Estimate")
   caption = paste("Full data, ",p,sep="")
   write(print(xtable(tmp_table,caption = caption),
-              include.rownames=FALSE,
+              include.rownames=TRUE,
               include.colnames=TRUE,
               tabular.environment="tabular",
               floating=FALSE,
@@ -841,12 +841,12 @@ for (p in predicates) {
       rename("lower" = "l-95% CI", "upper" = "u-95% CI") %>%
       select(-c(Est.Error,Rhat,Bulk_ESS,Tail_ESS)) %>%
       mutate(across(c('Estimate','lower', 'upper'), round, 2)) %>%
-      mutate("95% CI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
-      #rename("95% CI" = "95% CI") %>%
-      select(-c(lower,upper))
+      mutate("95% CrI" = paste0("[",as.character(lower), ",", as.character(upper), "]")) %>%
+      select(-c(lower,upper)) %>%
+      rename("Expected mean" = "Estimate")
     caption = paste(b,"data, ",p,sep="")
     write(print(xtable(tmp_table,caption = caption),
-                include.rownames=FALSE,
+                include.rownames=TRUE,
                 include.colnames=TRUE,
                 #tabular.environment="longtable",
                 floating=FALSE,
