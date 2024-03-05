@@ -1,5 +1,5 @@
 *.rds
-*.pdf
+/output/**/.pdf
 
 
 /mturk/*
