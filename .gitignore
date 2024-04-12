@@ -1,6 +1,7 @@
 *.rds
 /output/**/.pdf
 
+response-letter.pdf
 
 /mturk/*
 /output/*
