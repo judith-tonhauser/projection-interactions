@@ -13,6 +13,22 @@ library(tidybayes)
 library(emmeans)
 library(brmsmargins)
 
+# power analysis
+
+# effect sizes of at-issueness in exp. 1a and 1b, for comparison: .37, .34
+# effect sizes in exp. 2a and 2b: .25/.29 (depending on random effects structure)
+
+# we analyze the power of two different models: 
+# m -- has full maximal random effects structure and detected only marginally significant effect of at-issueness (beta = .25)
+fixef(m)["cmean_ai"]
+powerSim(m) # power: 60.40% (57.29, 63.45)
+
+# m.report -- has only by-content random intercepts after model comparison (beta = .29)
+fixef(m.report)["cmean_ai"]
+powerSim(m.report) # power: 99.80% (99.28, 99.98)
+
+
+
 # structure of this file:
 
 # main analyses: "projection" for questions (I, II, III.a), "ai-prior" for question (III.b)
@@ -281,7 +297,7 @@ for (p in predicates) {
 # tmp <- readRDS("../models/projection-byBlock/model_projai.acknowledge.rds")
 # summary(tmp)
 
-# fit the model: question (III.b)
+# fit the model: question (III.b) ----
 
 betamodel = bf(betaAI ~ cprior + (1+cprior|content),
                phi ~ cprior + (1|content), # beta distribution's precision 
