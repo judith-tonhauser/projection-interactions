@@ -4,8 +4,8 @@ The repository has the following folders:
 
 *experiments: The materials and code to run Exp 1 and Exp 2.
 
-*output: Talk slides and papers based on the experiments
+*output: Talk slides and papers based on the experiments (removed for review)
 
-*results: R code to analyze the data of Exp 1 and Exp 2. This folder also contains the full model outputs under /models/full-model-outputs. The models (.rds) were not pushed to the repository as they are too big. Please contact Judith Tonhauser if you would like access to the models.
+*results: R code to analyze the data of Exp 1 and Exp 2. This folder also contains the full model outputs under /models/full-model-outputs. The models themselves (.rds files) were not pushed to the repository as they are too big. Please contact Judith Tonhauser if you would like access to the models.
 
 
