@@ -372,3 +372,26 @@ ggplot(means, aes(x=Mean.AI, y=Mean.Proj)) +
   theme(panel.spacing.x = unit(4, "mm")) +
   coord_fixed(ratio = 1) 
 ggsave(f="../graphs/SUP-mean-projection-by-mean-ai.pdf",height=4,width=4)
+
+## Supplement H: distribution of ratings ----
+# (to justify fitting beta-models rather than ZOIB models)
+
+# load the data
+d <- read_csv("../data/d.csv")
+nrow(d) #10000
+
+names(d)
+# projective, ai
+
+ggplot(d, aes(projective)) +
+  geom_histogram(color="black",bins = 100) +
+  facet_wrap(. ~ short_trigger,nrow = 5) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) 
+ggsave(f="../graphs/SUP-rating-distributions-projective.pdf",height=5,width=5)
+
+ggplot(d, aes(ai)) +
+  geom_histogram(color="black",bins = 100) +
+  facet_wrap(. ~ short_trigger,nrow = 5) +
+  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) 
+ggsave(f="../graphs/SUP-rating-distributions-ai.pdf",height=5,width=5)
+
