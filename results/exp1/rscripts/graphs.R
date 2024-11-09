@@ -946,22 +946,61 @@ nrow(d) #10100
 names(d)
 # prior, projective, ai
 
+# order the predicates by projection 
+# sort predicates by projection mean
+proj.means = d %>%
+  group_by(short_trigger) %>%
+  summarize(Mean_proj = mean(projective)) %>%
+  mutate(short_trigger = fct_rev(fct_reorder(as.factor(short_trigger),Mean_proj)))
+proj.means
+
+d = d %>%
+  mutate(short_trigger = fct_relevel(short_trigger,levels(proj.means$short_trigger)))
+levels(d$short_trigger)
+
+# color-code the predicates
+d = d %>%
+  mutate(predicateType = case_when(short_trigger == "discover" ~ "factive",
+                                   short_trigger == "know" ~ "factive",
+                                   short_trigger == "be annoyed" ~ "factive",
+                                   short_trigger == "reveal" ~ "factive",
+                                   short_trigger == "see" ~ "factive",
+                                   TRUE ~ "nonfactive"))
+table(d$short_trigger,d$predicateType)
+
+# plots
+
 ggplot(d, aes(prior)) +
-  geom_histogram(color="black",bins = 100) +
+  geom_histogram(aes(color=predicateType),bins = 100) +
   facet_wrap(. ~ short_trigger,nrow = 5) +
-  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) 
+  scale_color_manual(values=c("#E69F00","#999999")) +
+  scale_fill_manual(values=c("#E69F00","#999999")) +
+  guides(color = "none", fill = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) +
+  theme(strip.background=element_rect(fill="white")) +
+  xlab("Prior probability ratings")
 ggsave(f="../graphs/SUP-rating-distributions-prior.pdf",height=5,width=5)
 
 ggplot(d, aes(projective)) +
-  geom_histogram(color="black",bins = 100) +
+  geom_histogram(aes(color=predicateType),bins = 100) +
   facet_wrap(. ~ short_trigger,nrow = 5) +
-  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) 
+  scale_color_manual(values=c("#E69F00","#999999")) +
+  scale_fill_manual(values=c("#E69F00","#999999")) +
+  guides(color = "none", fill = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) +
+  theme(strip.background=element_rect(fill="white")) +
+  xlab("Certain that ratings")
 ggsave(f="../graphs/SUP-rating-distributions-projective.pdf",height=5,width=5)
 
 ggplot(d, aes(ai)) +
-  geom_histogram(color="black",bins = 100) +
+  geom_histogram(aes(color=predicateType),bins = 100) +
   facet_wrap(. ~ short_trigger,nrow = 5) +
-  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) 
+  scale_color_manual(values=c("#E69F00","#999999")) +
+  scale_fill_manual(values=c("#E69F00","#999999")) +
+  guides(color = "none", fill = "none") +
+  scale_x_continuous(expand = expansion(mult = c(0, 0)), breaks=c(0,1),labels=c("0","1"), limits = c(-.05,1.05)) +
+  theme(strip.background=element_rect(fill="white")) +
+  xlab("Asking-whether ratings")
 ggsave(f="../graphs/SUP-rating-distributions-ai.pdf",height=5,width=5)
 
 
