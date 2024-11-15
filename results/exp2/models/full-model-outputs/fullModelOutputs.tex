@@ -1,0 +1,684 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage[margin=1in,top=1in,bottom=1in,landscape]{geometry}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{subfig}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+%\usepackage[dvips]{graphics}
+%\usepackage[table]{xcolor}
+%\usepackage{amssymb}
+\usepackage{float}
+%\usepackage{subfig}
+\usepackage{booktabs}
+%\usepackage{subcaption}
+\usepackage{colortbl}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{multicol}
+\usepackage{txfonts}
+\usepackage{amsfonts}
+\usepackage{natbib}
+\usepackage{gb4e}
+\usepackage[all]{xy}
+\usepackage{rotating}
+\usepackage{tipa}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage{adjustbox}
+\usepackage{array}
+
+
+\def\bad{{\leavevmode\llap{*}}}
+\def\marginal{{\leavevmode\llap{?}}}
+\def\verymarginal{{\leavevmode\llap{??}}}
+\def\swmarginal{{\leavevmode\llap{4}}}
+\def\infelic{{\leavevmode\llap{\#}}}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+%\definecolor{gray}{rgb}{0.36, 0.54, 0.66}
+
+\definecolor{Pink}{RGB}{240,0,120}
+\newcommand{\red}[1]{\textcolor{Pink}{#1}}
+\newcommand{\jd}[1]{\textbf{\textcolor{Pink}{[jd: #1]}}}
+\definecolor{green}{RGB}{0,158,115}
+\definecolor{orange}{RGB}{213,94,0}
+
+\newcommand{\dashrule}[1][black]{%
+  \color{#1}\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}\xleaders\hbox{\rule{4pt}{0pt}\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}}\hfill\kern0pt%
+}
+
+\setlength{\parindent}{.3in}
+\setlength{\parskip}{0ex}
+
+\newcommand{\yi}{\'{\symbol{16}}}
+\newcommand{\nasi}{\~{\symbol{16}}}
+\newcommand{\hina}{h\nasi na}
+\newcommand{\ina}{\nasi na}
+
+\newcommand{\foc}{$_{\mbox{\small F}}$}
+
+\hyphenation{par-ti-ci-pa-tion}
+
+\setlength{\bibhang}{0.5in}
+\setlength{\bibsep}{0mm}
+\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+\newcommand{\6}{\mbox{$[\hspace*{-.6mm}[$}} 
+\newcommand{\9}{\mbox{$]\hspace*{-.6mm}]$}}
+\newcommand{\sem}[2]{\6#1\9$^{#2}$}
+\renewcommand{\ni}{\~{\i}}
+
+\newcommand{\citepos}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s}
+\newcommand{\citetpos}[1]{\citeauthor{#1}'s (\citeyear{#1})}
+
+\newcolumntype{R}[2]{%
+    >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+    l%
+    <{\egroup}%
+}
+\newcommand*\rot{\multicolumn{1}{R{90}{0em}}}% no optional argument here, please!
+
+\newcommand*\rots{\multicolumn{1}{R{90}{.7em}}}% no optional argument here, please!
+
+% positive coefficients/difference
+\definecolor{yellow1}{RGB}{102,102,0} 
+\definecolor{yellow2}{RGB}{153,153,0} 
+\definecolor{yellow3}{RGB}{204,204,0} 
+\definecolor{yellow4}{RGB}{255,255,204}
+%\definecolor{green1}{RGB}{0, 158, 115} % >.95
+%\definecolor{green2}{RGB}{55, 185, 141} % .85-.95
+%\definecolor{green3}{RGB}{88, 214, 167} % .75-.85
+%\definecolor{green4}{RGB}{119, 242, 194} % <.75
+
+% negative coefficients/difference
+\definecolor{purple1}{RGB}{150,57,109}
+\definecolor{purple2}{RGB}{188,78,139}
+\definecolor{purple3}{RGB}{215,149,186}
+\definecolor{purple4}{RGB}{236,206,223}
+
+
+\begin{document}
+
+\section*{Exp.~2}
+
+This document provides the model outputs for the models investigating the research questions (I), (II) and (IIIa), as well as for the models investigating the research question (IIIb) for Exp.~2. For each model, we provide the posterior of the variables (expected mean, 95\% highest posterior density interval). The fixed effects are the following:
+\\ cMean\_prior = centered mean prior
+\\ cai = centered at-issueness
+
+\newpage
+
+\section*{Exp.~2: Model outputs for the models investigating questions (I), (II) and (IIIa)}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.acknowledge.tex}
+} \subfloat[proj/ai subset, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.acknowledge.tex}
+} \\ \subfloat[ai/proj subset, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.acknowledge.tex}
+}
+
+\caption{Model outputs for {\em acknowledge}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em admit}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.admit.tex}
+} \subfloat[proj/ai subset, {\em admit}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.admit.tex}
+} \\ \subfloat[ai/proj subset, {\em admit}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.admit.tex}
+}
+
+\caption{Model outputs for {\em admit}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em announce}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.announce.tex}
+} \subfloat[proj/ai subset, {\em announce}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.announce.tex}
+} \\ \subfloat[ai/proj subset, {\em announce}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.announce.tex}
+}
+
+\caption{Model outputs for {\em announce}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.be.annoyed.tex}
+} \subfloat[proj/ai subset, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.be.annoyed.tex}
+} \\ \subfloat[ai/proj subset, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.be.annoyed.tex}
+}
+
+\caption{Model outputs for {\em be annoyed}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em be right}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.be.right.tex}
+} \subfloat[proj/ai subset, {\em be right}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.be.right.tex}
+} \\ \subfloat[ai/proj subset, {\em be right}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.be.right.tex}
+}
+
+\caption{Model outputs for {\em be right}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em confess}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.confess.tex}
+} \subfloat[proj/ai subset, {\em confess}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.confess.tex}
+} \\ \subfloat[ai/proj subset, {\em confess}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.confess.tex}
+}
+
+\caption{Model outputs for {\em confess}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.confirm.tex}
+} \subfloat[proj/ai subset, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.confirm.tex}
+} \\ \subfloat[ai/proj subset, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.confirm.tex}
+}
+
+\caption{Model outputs for {\em confirm}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.demonstrate.tex}
+} \subfloat[proj/ai subset, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.demonstrate.tex}
+} \\ \subfloat[ai/proj subset, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.demonstrate.tex}
+}
+
+\caption{Model outputs for {\em demonstrate}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em discover}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.discover.tex}
+} \subfloat[proj/ai subset, {\em discover}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.discover.tex}
+} \\ \subfloat[ai/proj subset, {\em discover}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.discover.tex}
+}
+
+\caption{Model outputs for {\em discover}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em establish}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.establish.tex}
+} \subfloat[proj/ai subset, {\em establish}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.establish.tex}
+} \\ \subfloat[ai/proj subset, {\em establish}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.establish.tex}
+}
+
+\caption{Model outputs for {\em establish}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em hear}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.hear.tex}
+} \subfloat[proj/ai subset, {\em hear}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.hear.tex}
+} \\ \subfloat[ai/proj subset, {\em hear}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.hear.tex}
+}
+
+\caption{Model outputs for {\em hear}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em inform}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.inform.tex}
+} \subfloat[proj/ai subset, {\em inform}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.inform.tex}
+} \\ \subfloat[ai/proj subset, {\em inform}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.inform.tex}
+}
+
+\caption{Model outputs for {\em inform}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em know}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.know.tex}
+} \subfloat[proj/ai subset, {\em know}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.know.tex}
+} \\ \subfloat[ai/proj subset, {\em know}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.know.tex}
+}
+
+\caption{Model outputs for {\em know}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.pretend.tex}
+} \subfloat[proj/ai subset, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.pretend.tex}
+} \\ \subfloat[ai/proj subset, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.pretend.tex}
+}
+
+\caption{Model outputs for {\em pretend}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em prove}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.prove.tex}
+} \subfloat[proj/ai subset, {\em prove}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.prove.tex}
+} \\ \subfloat[ai/proj subset, {\em prove}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.prove.tex}
+}
+
+\caption{Model outputs for {\em prove}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.reveal.tex}
+} \subfloat[proj/ai subset, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.reveal.tex}
+} \\ \subfloat[ai/proj subset, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.reveal.tex}
+}
+
+\caption{Model outputs for {\em reveal}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em say}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.say.tex}
+} \subfloat[proj/ai subset, {\em say}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.say.tex}
+} \\ \subfloat[ai/proj subset, {\em say}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.say.tex}
+}
+
+\caption{Model outputs for {\em say}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em see}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.see.tex}
+} \subfloat[proj/ai subset, {\em see}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.see.tex}
+} \\ \subfloat[ai/proj subset, {\em see}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.see.tex}
+}
+
+\caption{Model outputs for {\em see}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.suggest.tex}
+} \subfloat[proj/ai subset, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.suggest.tex}
+} \\ \subfloat[ai/proj subset, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.suggest.tex}
+}
+
+\caption{Model outputs for {\em suggest}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em think}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/full.think.tex}
+} \subfloat[proj/ai subset, {\em think}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.projai.think.tex}
+} \\ \subfloat[ai/proj subset, {\em think}]{
+\input{../latex-tables/supplement/models-for-questions-I-II-IIIa/byBlock.aiproj.think.tex}
+}
+
+\caption{Model outputs for {\em think}}
+\end{table}
+
+\newpage
+
+\section*{Exp.~2: Model outputs for the models investigating question (IIIb)}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.acknowledge.tex}
+} \subfloat[proj/ai subset, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.acknowledge.tex}
+} \\ \subfloat[ai/proj subset, {\em acknowledge}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.acknowledge.tex}
+}
+
+\caption{Model outputs for {\em acknowledge}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em admit}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.admit.tex}
+} \subfloat[proj/ai subset, {\em admit}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.admit.tex}
+} \\ \subfloat[ai/proj subset, {\em admit}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.admit.tex}
+}
+
+\caption{Model outputs for {\em admit}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em announce}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.announce.tex}
+} \subfloat[proj/ai subset, {\em announce}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.announce.tex}
+} \\ \subfloat[ai/proj subset, {\em announce}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.announce.tex}
+}
+
+\caption{Model outputs for {\em announce}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.be.annoyed.tex}
+} \subfloat[proj/ai subset, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.be.annoyed.tex}
+} \\ \subfloat[ai/proj subset, {\em be annoyed}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.be.annoyed.tex}
+}
+
+\caption{Model outputs for {\em be annoyed}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em be right}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.be.right.tex}
+} \subfloat[proj/ai subset, {\em be right}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.be.right.tex}
+} \\ \subfloat[ai/proj subset, {\em be right}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.be.right.tex}
+}
+
+\caption{Model outputs for {\em be right}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em confess}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.confess.tex}
+} \subfloat[proj/ai subset, {\em confess}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.confess.tex}
+} \\ \subfloat[ai/proj subset, {\em confess}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.confess.tex}
+}
+
+\caption{Model outputs for {\em confess}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.confirm.tex}
+} \subfloat[proj/ai subset, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.confirm.tex}
+} \\ \subfloat[ai/proj subset, {\em confirm}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.confirm.tex}
+}
+
+\caption{Model outputs for {\em confirm}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.demonstrate.tex}
+} \subfloat[proj/ai subset, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.demonstrate.tex}
+} \\ \subfloat[ai/proj subset, {\em demonstrate}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.demonstrate.tex}
+}
+
+\caption{Model outputs for {\em demonstrate}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em discover}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.discover.tex}
+} \subfloat[proj/ai subset, {\em discover}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.discover.tex}
+} \\ \subfloat[ai/proj subset, {\em discover}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.discover.tex}
+}
+
+\caption{Model outputs for {\em discover}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em establish}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.establish.tex}
+} \subfloat[proj/ai subset, {\em establish}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.establish.tex}
+} \\ \subfloat[ai/proj subset, {\em establish}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.establish.tex}
+}
+
+\caption{Model outputs for {\em establish}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em hear}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.hear.tex}
+} \subfloat[proj/ai subset, {\em hear}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.hear.tex}
+} \\ \subfloat[ai/proj subset, {\em hear}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.hear.tex}
+}
+
+\caption{Model outputs for {\em hear}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em inform}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.inform.tex}
+} \subfloat[proj/ai subset, {\em inform}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.inform.tex}
+} \\ \subfloat[ai/proj subset, {\em inform}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.inform.tex}
+}
+
+\caption{Model outputs for {\em inform}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em know}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.know.tex}
+} \subfloat[proj/ai subset, {\em know}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.know.tex}
+} \\ \subfloat[ai/proj subset, {\em know}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.know.tex}
+}
+
+\caption{Model outputs for {\em know}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.pretend.tex}
+} \subfloat[proj/ai subset, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.pretend.tex}
+} \\ \subfloat[ai/proj subset, {\em pretend}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.pretend.tex}
+}
+
+\caption{Model outputs for {\em pretend}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em prove}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.prove.tex}
+} \subfloat[proj/ai subset, {\em prove}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.prove.tex}
+} \\ \subfloat[ai/proj subset, {\em prove}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.prove.tex}
+}
+
+\caption{Model outputs for {\em prove}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.reveal.tex}
+} \subfloat[proj/ai subset, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.reveal.tex}
+} \\ \subfloat[ai/proj subset, {\em reveal}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.reveal.tex}
+}
+
+\caption{Model outputs for {\em reveal}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em say}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.say.tex}
+} \subfloat[proj/ai subset, {\em say}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.say.tex}
+} \\ \subfloat[ai/proj subset, {\em say}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.say.tex}
+}
+
+\caption{Model outputs for {\em say}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em see}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.see.tex}
+} \subfloat[proj/ai subset, {\em see}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.see.tex}
+} \\ \subfloat[ai/proj subset, {\em see}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.see.tex}
+}
+
+\caption{Model outputs for {\em see}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.suggest.tex}
+} \subfloat[proj/ai subset, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.suggest.tex}
+} \\ \subfloat[ai/proj subset, {\em suggest}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.suggest.tex}
+}
+
+\caption{Model outputs for {\em suggest}}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+
+\subfloat[Full data, {\em think}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/full.think.tex}
+} \subfloat[proj/ai subset, {\em think}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.projai.think.tex}
+} \\ \subfloat[ai/proj subset, {\em think}]{
+\input{../latex-tables/supplement/models-for-question-IIIb/byBlock.aiproj.think.tex}
+}
+
+\caption{Model outputs for {\em think}}
+\end{table}
+ 
+\end{document}
+
