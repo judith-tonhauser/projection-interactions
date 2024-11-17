@@ -38,6 +38,8 @@ powerSim(m.report) # power: 99.80% (99.28, 99.98)
 this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
+theme_set(theme_bw())
+
 # main analyses ----
 # 20 Bayesian mixed-effects beta-regressions on full data set, without block fixed effect
 # one for each predicate
@@ -84,16 +86,87 @@ betamodel = bf(betaProjective ~ cprior*cai + (1+cprior+cai|content),
                phi ~ cprior*cai + (1|content), # beta distribution's precision 
                family = Beta())
 
+zoib_model <- bf(
+  projective ~ cprior*cai + (1+cprior+cai|content),
+  phi ~ cprior*cai + (1|content),
+  zoi ~ cprior*cai + (1|content),
+  coi ~ cprior*cai + (1|content), 
+  family = zero_one_inflated_beta()
+)
+
+
+# experiment
+p = "prove"
+
 # fit the model for each predicate
 for (p in predicates) {
   data.here = read_csv(paste("../models/projection-main/data.", p, ".csv",sep=""))
-  saveRDS(assign(paste("model.", p, ".rds", sep=""), brm(formula = betamodel,
+  # run beta model
+  saveRDS(assign(paste("model.beta", p, ".rds", sep=""), brm(formula = betamodel,
                                                 family=Beta(),
                                                 data=data.here, 
                                                 cores = 4, iter = 3000, warmup = 500,
-                                                control = list(adapt_delta = .95,max_treedepth=15))),
-  file=paste("../models/projection-main/model.",p, ".rds", sep=""))
+                                                control = list(adapt_delta = .95,max_treedepth=15),
+                                                save_pars = save_pars(all = TRUE))),
+  file=paste("../models/projection-main/model.beta.",p, ".rds", sep=""))
+  
+  # run zoib model
+  saveRDS(assign(paste("model.zoib.", p, ".rds", sep=""), brm(formula = zoib_model,
+                                                             family=zero_one_inflated_beta(),
+                                                             data=data.here, 
+                                                             cores = 4, iter = 3000, warmup = 500,
+                                                             control = list(adapt_delta = .95,max_treedepth=15),
+                                                             save_pars = save_pars(all = TRUE))),
+          file=paste("../models/projection-main/model.zoib",p, ".rds", sep=""))
 }
+
+# Model comparison loop
+# which model does better -- beta or zoib?
+for (p in predicates) {
+  # load the two different models
+  m.beta = readRDS(paste("../models/projection-main/model.beta.",p, ".rds", sep=""))
+  m.zoib = readRDS(paste("../models/projection-main/model.zoib.",p, ".rds", sep=""))
+
+  # compare models
+  m.beta <- add_criterion(m.beta, criterion="loo", save_psis=TRUE)
+  m.zoib <- add_criterion(m.zoib, criterion="loo", save_psis=TRUE)
+loo_compare(m.beta,m.zoib) # the top model is the better performing one
+  
+  # posterior predictive checks
+  pp_check(m.beta, type="hist", ndraws=5)
+  ggsave(paste("../graphs/pp-checks/model.beta",p, ".pdf", sep=""))
+  
+  pp_check(m.zoib, type="hist", ndraws=5)
+  ggsave(paste("../graphs/pp-checks/model.zoib",p, ".pdf", sep=""))
+}
+
+
+
+summary(m.beta)
+summary(m.zoib)
+
+waic.beta = waic(m.beta)
+waic.zoib = waic(m.zoib)
+
+loo_compare(waic.beta,waic.zoib) 
+
+loo.beta = loo(m.beta) 
+loo.zoib = loo(m.zoib)
+
+
+
+
+
+
+loglik.beta = extract_log_lik(m.beta)
+
+waic.beta = waic(m.beta)
+waic.zoib = waic(m.zoib)
+
+loo_compare(waic.beta,waic.zoib)
+
+
+
 
 # tmp <- readRDS("../models/projection-main/model.think.rds")
 # summary(tmp)
