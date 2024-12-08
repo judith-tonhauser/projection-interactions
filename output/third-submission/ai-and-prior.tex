@@ -278,7 +278,9 @@ After completing the experiment, participants filled out a short optional demogr
 
 To address the research questions in (\ref{questions}), we want to know for each lexical meaning (contributed by a clause-embedding predicate) whether there is an effect of prior probability on projection (research question I), whether there is an effect of at-issueness on projection (research question II), whether there is an effect of the interaction of prior probability and at-issueness on projection (research question IIIa), and whether there is an effect of prior probability on at-issueness (research question IIIb). To address these questions, we fit two types of models to the data. All analyses were conducted in R (\citealt{R}, version 4.3.1) using RStudio (version 2023.12.0+369).
 
-First, to address questions (I), (II) and (IIIa), we fit 20 Bayesian mixed-effects beta regression models, one for each clause-embedding predicate, using the `brms' package (\citealt{buerkner2017}). The models predicted certainty ratings\footnote{To model the certainty ratings using a beta regression, the ratings were first transformed from the interval [0,1], that is, an interval that includes 0 and 1,  to the interval (0,1), that is, an interval that does not include 0 and 1, using the method proposed in \citealt{smithson-verkuilen2006}. In the models for research question (IIIb), the asking-whether ratings were also transformed in this way. {\bf ADDED THIS:} As pointed out by an anonymous reviewer, zero/one-inflated beta regressions should be fit to data that includes a lot of 0 and 1 responses. We fit regular beta regressions instead of zero/one-inflated beta regressions because our data does not include a lot of 0 and 1 responses, as shown in Supplement \ref{s:distribution}.} (measuring projection) from a centered fixed effect of asking-whether rating (measuring at-issueness), a centered fixed effect of prior probability rating, and their interaction.\footnote{\label{interaction}{\bf ADDED THIS:} As is standard in experimental pragmatics, the models we fit investigate multiplicative interactions between the fixed effects, not additive interactions. Furthermore, the models we fit include mean-centered fixed effects and their interactions, which means that the model outputs show the effect of a variable while all other variables are 0. It would also be possible, technically speaking, to fit models that show the effect of a variable while other variables are at their minimum, mean, median, or maximum values. This means that our models investigate whether there is an effect of a variable given a very particular (though standard) model specification. This limitation should be kept in mind when interpreting the results of our experiments. We thank an anonymous reviewer for asking us to clarify this point.} Priors on all fixed effects were flat.  The models included a random by-item intercept (where an item is a complement clause) and a random by-item slope for the fixed effects of asking-whether and prior probability rating.\footnote{By-participant random effects were not included here or in the models for research question (IIIb) because each participant saw each predicate only once.} The outputs of these models are expected means and their 95\% highest posterior density intervals (HDIs).\footnote{Since beta distributions include both a mean  ($\mu$) and precision parameter  ($\phi$), the model outputs also included expected precisions and their 95\% HDIs. However, for our purposes only  the means of the posterior distributions were relevant, so we didn't analyze the precisions.} Full model outputs are provided in the repository for Exp.~1.
+First, to address questions (I), (II) and (IIIa), we fit 20 Bayesian mixed-effects beta regression models, one for each clause-embedding predicate, using the `brms' package (\citealt{buerkner2017}). The models predicted certainty ratings\footnote{To model the certainty ratings using a beta regression, the ratings were first transformed from the interval [0,1], that is, an interval that includes 0 and 1,  to the interval (0,1), that is, an interval that does not include 0 and 1, using the method proposed in \citealt{smithson-verkuilen2006}. In the models for research question (IIIb), the asking-whether ratings were also transformed in this way. We thank an anonymous reviewer for suggesting that it might be better to fit zero/one-inflated beta (ZOIB) models instead of regular beta regressions. We fit regular beta regression models rather than ZOIB models for two reasons, one conceptual and one practical. The conceptual reason is that there is nothing inherent in the endpoints of the scale that force them to be coded as 0 and 1. Researchers adopted this practice largely because these numbers are interpretable as probability 0 and 1. However, as researchers, we could have just as easily declared the endpoints as .000001 and .999999, which, one could argue, more appropriately represent the unconscious subjective state a participant is in when tending towards an endpoint in our rating task, that is, a state of very near, but nevertheless not absolute, certainty. If we agree that it is to some extent arbitrary what the numbers are that we assign to the endpoints, then the argument that we must pay special homage to the endpoints in our statistical models loses force. 
+
+To the reader who is not convinced by the conceptual argument, we present a practical argument. To test whether regular beta regression or ZOIB models are better justified by the data, we conducted both types of analyses on the full data of Exp.~1. We then conducted an ELPD-based model comparison between the ZOIB and beta regression models using the loo\_compare() function of the `brms' package in R. The ELPD is the expected log predictive density, an estimate of the predictive performance of a model on new data, and it can be used to compare models from different function families. Across all predicates, the beta models won out over the ZOIB models, with ELPD differences of 224 to 625. The model comparison results and plots of posterior predictive checks can be found in the GitHub repository (under results/exp1/rscripts/ZOIB-comparison/). The reason the regular beta regression models do better is that participants' ratings are slightly noisy -- there are many tiny deviations from 0 and 1 in responses, which show up as smooth transitions from endpoint to non-endpoint ratings in the raw data distributions. Regular beta regression can capture these smooth transitions, but the ZOIB models, by virtue of treating 0/1 responses as generated by a separate distribution, cannot. Thus, the ZOIB models overpredict 0/1 responses across the board.} (measuring projection) from a centered fixed effect of asking-whether rating (measuring at-issueness), a centered fixed effect of prior probability rating, and their interaction.\footnote{\label{interaction}{\bf ADDED THIS:} As is standard in experimental pragmatics, the models we fit investigate multiplicative interactions between the fixed effects.  Furthermore, the included predictors were mean-centered. Thus, the interaction terms can be interpreted as providing estimates of the relative size of an effect of one variable on relatively higher (vs lower) values of the other variable, compared to the overall mean. We thank an anonymous reviewer for asking us to clarify this point.} Priors on all fixed effects were flat.  The models included a random by-item intercept (where an item is a complement clause) and a random by-item slope for the fixed effects of asking-whether and prior probability rating.\footnote{By-participant random effects were not included here or in the models for research question (IIIb) because each participant saw each predicate only once.} The outputs of these models are expected means and their 95\% highest posterior density intervals (HDIs).\footnote{Since beta distributions include both a mean  ($\mu$) and precision parameter  ($\phi$), the model outputs also included expected precisions and their 95\% HDIs. However, for our purposes only  the means of the posterior distributions were relevant, so we didn't analyze the precisions.} Full model outputs are provided in the repository for Exp.~1.
 
 Second, to address question (IIIb), we also fit 20 Bayesian mixed-effects beta regression models, one for each clause-embedding predicate. The models predicted asking-whether ratings (measuring at-issueness) from a centered fixed effect of prior probability rating, again with a flat prior on the fixed effect. The models included a random by-item intercept (where an item is a complement clause) and a random by-item slope for the fixed effect of prior probability rating. As with the models described above, the outputs of these models are expected means and 95\% highest posterior density intervals. Full model outputs are provided in the repository for Exp.~1.
 
@@ -972,46 +974,44 @@ Fig.~\ref{fig:SUP-ai-comparison} compares the certainty ratings from Exps.~1 and
 \caption{Comparisons of (a) 20 mean by-predicate, (b) 400 by-predicate/item certainty ratings, and (c) 800 by-predicate/item asking-whether ratings from Exps.~1 and 2,  with Spearman rank effects in the title. Error bars indicate 95\% bootstrapped confidence intervals.}\label{fig:SUP-ai-comparison}
 \end{figure}
 
-\newpage
-
-\section{Distribution of ratings in Exps.~1 and 2}\label{s:distribution}
-
-\subsection{Distribution of ratings in Exp.~1}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-prior}
-\caption{Histogram of prior probability ratings in Exp.~1.}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-projective}
-\caption{Histogram of `certain that'  ratings in Exp.~1.}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-ai}
-\caption{Histogram of `asking whether' ratings in Exp.~1.}
-\end{figure}
-
-\newpage
-
-\subsection{Distribution of ratings in Exp.~2}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.8\textwidth]{../../results/exp2/graphs/SUP-rating-distributions-projective}
-\caption{Histogram of `certain that' ratings in Exp.~2.}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=.8\textwidth]{../../results/exp2/graphs/SUP-rating-distributions-ai}
-\caption{Histogram of `asking whether' ratings in Exp.~2.}
-\end{figure}
-
+%\section{Distribution of ratings in Exps.~1 and 2}\label{s:distribution}
+%
+%\subsection{Distribution of ratings in Exp.~1}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-prior}
+%\caption{Histogram of prior probability ratings in Exp.~1.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-projective}
+%\caption{Histogram of `certain that'  ratings in Exp.~1.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.8\textwidth]{../../results/exp1/graphs/SUP-rating-distributions-ai}
+%\caption{Histogram of `asking whether' ratings in Exp.~1.}
+%\end{figure}
+%
+%\newpage
+%
+%\subsection{Distribution of ratings in Exp.~2}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.8\textwidth]{../../results/exp2/graphs/SUP-rating-distributions-projective}
+%\caption{Histogram of `certain that' ratings in Exp.~2.}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=.8\textwidth]{../../results/exp2/graphs/SUP-rating-distributions-ai}
+%\caption{Histogram of `asking whether' ratings in Exp.~2.}
+%\end{figure}
+%
 
 \end{document}
 
