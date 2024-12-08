@@ -93,12 +93,17 @@ for (p in predicates) {
           file=paste("../models/model.zoib",p, ".rds", sep=""))
 }
 
-# Model comparison loop
+# model comparison loop
 # which model does better -- beta or zoib?
+
+comparison = data.frame(predicate = character(), model = character(), elpd_diff = numeric(),
+                se_diff = numeric())
+comparison
+
 for (p in predicates) {
   # load the two different models
-  m.beta = readRDS(paste("../models/projection-main/model.beta.",p, ".rds", sep=""))
-  m.zoib = readRDS(paste("../models/projection-main/model.zoib",p, ".rds", sep=""))
+  m.beta = readRDS(paste("../models/model.beta.",p, ".rds", sep=""))
+  m.zoib = readRDS(paste("../models/model.zoib",p, ".rds", sep=""))
 
   # compare models
   m.beta <- add_criterion(m.beta, criterion="loo", save_psis=TRUE)
@@ -106,12 +111,20 @@ for (p in predicates) {
   
   print(p)
   print(loo_compare(m.beta,m.zoib)) # the top model is the better performing one
+  comparison_tmp = loo_compare(m.beta, m.zoib)
+  for (i in 1:nrow(comparison_tmp)) {
+    comparison = comparison %>% 
+      add_row(predicate = p, model = comparison_tmp[i], elpd_diff = ,
+              se_diff = 
+              state.CC = PL_tmp$support[i], 
+              prob = PL_tmp$prob[i])
+  }
   
   # posterior predictive checks
   pp_check(m.beta, type="hist", ndraws=5)
-  ggsave(paste("../graphs/pp-checks/model.beta.",p, ".pdf", sep=""))
+  ggsave(paste("../graphs/model.beta.",p, ".pdf", sep=""))
   
   pp_check(m.zoib, type="hist", ndraws=5)
-  ggsave(paste("../graphs/pp-checks/model.zoib.",p, ".pdf", sep=""))
+  ggsave(paste("../graphs/model.zoib.",p, ".pdf", sep=""))
 }
 
