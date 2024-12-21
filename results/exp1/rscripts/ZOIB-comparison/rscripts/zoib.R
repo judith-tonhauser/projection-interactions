@@ -96,7 +96,7 @@ for (p in predicates) {
 # model comparison loop
 # which model does better -- beta or zoib?
 
-comparison = data.frame(predicate = character(), model = character(), elpd_diff = numeric(),
+comparison = data.frame(predicate = character(), winning.model = character(), elpd_diff = numeric(),
                 se_diff = numeric())
 comparison
 
@@ -111,14 +111,10 @@ for (p in predicates) {
   
   print(p)
   print(loo_compare(m.beta,m.zoib)) # the top model is the better performing one
-  comparison_tmp = loo_compare(m.beta, m.zoib)
-  for (i in 1:nrow(comparison_tmp)) {
-    comparison = comparison %>% 
-      add_row(predicate = p, model = comparison_tmp[i], elpd_diff = ,
-              se_diff = 
-              state.CC = PL_tmp$support[i], 
-              prob = PL_tmp$prob[i])
-  }
+  comparison_tmp = rownames_to_column(as.data.frame(loo_compare(m.beta, m.zoib)),var = "model")
+  comparison = comparison %>%
+      add_row(predicate = p, winning.model = comparison_tmp[1,1], elpd_diff = abs(round(comparison_tmp[2,2],0)), 
+              se_diff = abs(round(comparison_tmp[2,3],0)))
   
   # posterior predictive checks
   pp_check(m.beta, type="hist", ndraws=5)
@@ -128,3 +124,7 @@ for (p in predicates) {
   ggsave(paste("../graphs/model.zoib.",p, ".pdf", sep=""))
 }
 
+# this file records the winning model and the ELPD difference between the winning and loosing models
+write_csv(comparison, file="../comparison.csv")
+min(comparison$elpd_diff) #224
+max(comparison$elpd_diff) #625

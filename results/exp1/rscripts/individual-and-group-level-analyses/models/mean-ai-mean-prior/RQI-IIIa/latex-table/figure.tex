@@ -1,0 +1,176 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{pdflscape}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{mathtools}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage[colorlinks = true,
+		linkcolor=black,
+		citecolor=black,
+	        urlcolor  = black]{hyperref}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\usepackage[normalem]{ulem}
+
+\usepackage{multicol}
+\usepackage{txfonts}
+\usepackage{amsfonts}
+\usepackage{natbib}
+
+\usepackage{graphicx}
+
+\usepackage{tikzsymbols} % for smileys
+
+\usepackage{multirow}
+
+\usepackage{gb4e}
+\usepackage[all]{xy}
+\usepackage{rotating}
+\usepackage{tipa}
+\usepackage{multirow}
+\usepackage{authblk}
+\usepackage{url}
+\usepackage{pdflscape}
+\usepackage{adjustbox}
+\usepackage{array}
+
+\newcommand*\rot{\rotatebox{90}}
+
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+
+\usepackage{dcolumn} % for printing model output tables directly from R
+
+
+%\usepackage{color}
+%\DeclareOuterCiteDelims{cite}{\textcolor{green}{\bibopenbracket}}{\textcolor{red}{\bibclosebracket}}
+
+\definecolor{Pink}{RGB}{255,50,170}
+\newcommand{\jd}[1]{\textcolor{Pink}{[jd: #1]}}  
+
+% colors for Table 1
+\definecolor{orange}{RGB}{230,159,0}
+
+% positive coefficients/difference
+\definecolor{red1}{RGB}{199, 38, 58}
+\definecolor{red2}{RGB}{255, 108, 111} 
+%\definecolor{red3}{RGB}{255,176,156} 
+\definecolor{red4}{RGB}{254, 234, 227} 
+%\definecolor{red5}{RGB}{255,239,234} 
+
+
+% negative coefficients/difference
+\definecolor{blue1}{RGB}{0, 115, 193}
+\definecolor{blue2}{RGB}{58, 173, 252}
+%\definecolor{blue3}{RGB}{104,133,239}
+\definecolor{blue4}{RGB}{227, 241, 254}
+%\definecolor{blue5}{RGB}{238,247,247}
+
+\newcommand{\jt}[1]{\textbf{\color{purple}JT: #1}}
+
+\newcommand{\tableref}[1]{Tab.~\ref{#1}}
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+
+\def\bad{{\leavevmode\llap{*}}}
+\def\marginal{{\leavevmode\llap{?}}}
+\def\verymarginal{{\leavevmode\llap{??}}}
+\def\swmarginal{{\leavevmode\llap{4}}}
+\def\infelic{{\leavevmode\llap{\#}}}
+
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+%\definecolor{gray}{rgb}{0.36, 0.54, 0.66}
+
+\newcommand{\dashrule}[1][black]{%
+  \color{#1}\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}\xleaders\hbox{\rule{4pt}{0pt}\rule[\dimexpr.5ex-.2pt]{4pt}{.4pt}}\hfill\kern0pt%
+}
+
+\setlength{\parindent}{.3in}
+\setlength{\parskip}{0ex}
+
+\newcommand{\yi}{\'{\symbol{16}}}
+\newcommand{\nasi}{\~{\symbol{16}}}
+\newcommand{\hina}{h\nasi na}
+\newcommand{\ina}{\nasi na}
+
+\newcommand{\foc}{$_{\mbox{\small F}}$}
+
+%\setlength{\bibhang}{0.5in}
+\setlength{\bibsep}{0mm}
+%\bibpunct[:]{(}{)}{,}{a}{}{,}
+
+\newcommand{\6}{\mbox{$[\hspace*{-.6mm}[$}} 
+\newcommand{\9}{\mbox{$]\hspace*{-.6mm}]$}}
+\newcommand{\sem}[2]{\6#1\9$^{#2}$}
+\renewcommand{\ni}{\~{\i}}
+
+\newcommand{\citepos}[1]{\citeauthor{#1}'s \citeyear{#1}}
+\newcommand{\citeposs}[1]{\citeauthor{#1}'s}
+\newcommand{\citetpos}[1]{\citeauthor{#1}'s \citeyear{#1}}
+
+%\newcolumntype{R}[2]{%
+%    >{\adjustbox{angle=#1,lap=\width-(#2)}\bgroup}%
+%    l%
+%    <{\egroup}%
+%}
+%\newcommand*\rot{\multicolumn{1}{R{90}{0em}}}% no optional argument here, please!
+
+%\newcommand*\rot{\rotatebox{90}}
+
+%\title{At-issueness and prior beliefs independently modulate projection}
+
+%\thanks{For helpful comments on the research presented here, we thank the audience at the 2018 Annual Meeting of XPRAG.de and at the University of T\"ubingen. We gratefully acknowledge financial support for this research from {\em National Science Foundation} grant BCS-1452674 (JT) and the Targeted Investment for Excellence Initiative at The Ohio State University (JT). IGOR Tuebingen}}
+
+%\author{Author(s)}
+
+%\author[$\bullet$]{Judith Degen}
+%\author[$\circ$]{Judith Tonhauser}
+%
+%\affil[$\bullet$]{Stanford University}
+%\affil[$\circ$]{University of Stuttgart}
+%
+%\renewcommand\Authands{ and }
+
+\begin{document}
+
+\thispagestyle{empty}
+
+% Submissions should include a title page, an abstract, and should be divided into labeled sections as detailed in the style sheet.
+% Glossa psycholinguistics: please add a word count (including footnotes and references) directly below the paper title. 
+% Regular articles should be no longer than 15,000 words, excluding references
+% All references cited within the submission must be listed at the end of the main text file. Please format references and citations in APA style.
+
+
+\setlength{\fboxrule}{0pt}
+
+\begin{table}[h!]
+\begin{subtable}[h]{1\textwidth}
+\setlength{\tabcolsep}{3pt}
+\centering
+\input{../t1}
+\caption{Results of Exp.~1: individual proj $\sim$ mean ai * mean prior}\label{t:resultsExp1}
+\end{subtable}
+
+%\vspace*{.4cm}
+%
+%\begin{subtable}[h]{1\textwidth}
+%\setlength{\tabcolsep}{3.5pt}
+%\centering
+%\input{../../results/exp2/models/latex-tables/t1}
+%\caption{Results of Exp.~2}\label{t:resultsExp2}
+%\end{subtable}
+
+\caption{Summary of the results of Exps.~1 and 2. The `Effect' column identifies the research question and the hypothesized effect, and the `Data' column whether the model was fit to the full dataset (`full') or a subset with a particular block order ('proj/ai', 'ai/proj'). Predicates are ordered by mean projection in Exp.~1 with factive predicates in \color{orange}orange\color{black}. Color coding indicates whether the effect was positive (red) or negative (blue), and the Bayes factor associated with the effect: \colorbox{red1}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}},\colorbox{blue1}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}}: 21+ (``very strong to extreme evidence''), 
+\colorbox{red2}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}},\colorbox{blue2}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}}: 11-20 (``strong evidence''), 
+\colorbox{red4}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}},\colorbox{blue4}{\makebox[1em][c]{\framebox[1em]{\rule{0pt}{3pt}}}}: 2-10 (``weak to moderate evidence'').
+White indicates that there was no evidence for an effect. 
+}
+
+\end{table}
+
+\end{document}
+
+

@@ -1,0 +1,12 @@
+% latex table generated in R 4.4.1 by xtable 1.8-4 package
+% Sat Dec 21 09:39:51 2024
+\begin{tabular}{lllllllllllllllllllll}
+  \hline
+{\bf Effect} & \rot{\color{orange}be annoyed\color{black}} & \rot{\color{orange}know\color{black}} & \rot{inform} & \rot{\color{orange}see\color{black}} & \rot{hear} & \rot{\color{orange}discover\color{black}} & \rot{acknowledge} & \rot{\color{orange}reveal\color{black}} & \rot{admit} & \rot{confess} & \rot{announce} & \rot{demonstrate} & \rot{confirm} & \rot{establish} & \rot{prove} & \rot{be right} & \rot{think} & \rot{say} & \rot{suggest} & \rot{pretend} \\ 
+  \hline
+mean prior on proj & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red2} \\ 
+  mean nai on proj & \cellcolor{red1} & \cellcolor{red4} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red1} & \cellcolor{red4} & \cellcolor{red4} & \cellcolor{red2} & \cellcolor{red1} & \cellcolor{red4} & \cellcolor{red4} & \cellcolor{red4} & \cellcolor{red1} & \cellcolor{blue4} & \cellcolor{red4} & \cellcolor{red1} & \cellcolor{blue4} & \cellcolor{blue4} & \cellcolor{white} & \cellcolor{blue1} \\ 
+  mean prior:mean nai on proj & \cellcolor{red4} & \cellcolor{white} & \cellcolor{red1} & \cellcolor{blue4} & \cellcolor{red2} & \cellcolor{red4} & \cellcolor{red4} & \cellcolor{blue4} & \cellcolor{red4} & \cellcolor{red4} & \cellcolor{red1} & \cellcolor{red2} & \cellcolor{white} & \cellcolor{red4} & \cellcolor{red2} & \cellcolor{red4} & \cellcolor{white} & \cellcolor{blue4} & \cellcolor{red4} & \cellcolor{blue4} \\ 
+   \hline
+\end{tabular}
+
