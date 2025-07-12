@@ -353,3 +353,4 @@ nrow(d_aiproj) #4920
 
 write_csv(d_projai, file="../data/d_projai.csv")
 nrow(d_projai) #5120
+
